@@ -133,7 +133,7 @@ def top_cuisines (df1, top_asc):
                  .mean()
                      .sort_values('aggregate_rating', ascending=top_asc).head(qtde_rest).reset_index())
     df_aux = round(df_aux,2)
-    fig = (px.bar(df_aux, x='cuisines', y='aggregate_rating', title=f'Top {qtde_rest} Melhores Tipos de Culinárias',
+    fig = (px.bar(df_aux, x='cuisines', y='aggregate_rating', title=f'Top {qtde_rest}  Tipos de Culinárias',
             text_auto=True,
              labels={'aggregate_rating':'Média das Avaliações',
                     'cuisines' : 'Culinária'}))
